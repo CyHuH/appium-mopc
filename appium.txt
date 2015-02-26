@@ -1,0 +1,12 @@
+[caps]
+platformName = "iOS"
+platformVersion = "8.1"
+deviceName = "iPhone5 (8.1.2)"
+bundleId = "ru.apress.imopc"
+app = "/Users/Andrey/Work/imopc/imopc/build/Release-iphonesnesimulator/imopc.app"
+udid = "8DDADC74EAACF56F965D59A11FE9435F76C0E50B"
+launchTimeout = 500000
+showIOSLog = true
+[appium_lib]
+sauce_username = ""
+sauce_access_key = ""

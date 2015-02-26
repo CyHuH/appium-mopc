@@ -1,10 +1,11 @@
 [caps]
 platformName = "Android"
 platformVersion = "5.0"
-deviceName = "01be14af23ce72bc"
+deviceName = "077bba22"
 app = "/Users/Andrey/Work/mopc/test/target/mopc.apk"
 newCommandTimeout = "120"
 unicodeKeyboard = true
+resetKeyboard = true
 
 [appium_lib]
 sauce_username = false
