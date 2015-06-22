@@ -8,3 +8,13 @@ Feature: Products search
     Then I swipe products list 4 times
     Then Element №17 should exist
     Then I take a screenshot with name test2
+
+  Scenario: Search in categories
+    Given Hard reset
+    Then Tap on categories search element
+    Then I select random third level category from list
+    And I select product №5 from products list
+    Then Product name from chosen product should be equal product name from card
+    And I swipe products list 4 times
+    Then Element №17 should exist
+    And I take a screenshot with name test3

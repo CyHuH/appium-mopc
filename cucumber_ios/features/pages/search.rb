@@ -1,5 +1,4 @@
-module HomeWorld
-  @test_var = "it works"
+module SearchWorld
   def product_click
     xpath("//UIATableView[1]/UIATableCell[3]/UIAStaticText[1]").click
   end
@@ -19,5 +18,11 @@ module HomeWorld
                    :end_y => 200,
                    :duration => 500 }
     n.to_i.times { wait{ swipe(swipe_opts) } }
+  end
+
+  def tap_rnd_category
+    categories = tags("UIATableCell")
+    x = categories.size + 1
+    categories[rand(x)].click
   end
 end

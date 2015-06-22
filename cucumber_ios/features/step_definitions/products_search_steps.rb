@@ -1,6 +1,6 @@
-require_relative '../pages/home'
+require_relative '../pages/search'
 
-World(HomeWorld)
+World(SearchWorld)
 
 Given /^I type search query (.*) and press enter button$/ do |product_name|
   search_field = ele_index("UIASearchBar", 1)
@@ -27,4 +27,17 @@ end
 
 Then(/^I take a screenshot with name (.*)$/) do |name|
   screenshot "/Users/Andrey/Work/tmp/#{name}.png"
+end
+
+Given(/^Tap on categories search element$/) do
+  categories_search = wait { first_ele("UIATableCell") }
+  categories_search.click
+end
+
+Then(/^I select random third level category from list$/) do
+  3.times { wait {tap_rnd_category} }
+end
+
+Given(/^Hard reset$/) do
+  reset
 end
