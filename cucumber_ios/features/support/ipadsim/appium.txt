@@ -1,0 +1,9 @@
+[caps]
+platformName = "ios"
+platformVersion = "8.3"
+deviceName ="iPad Air"
+app = "/Users/Andrey/Work/imopc/imopc/DerivedData/imopc/Build/Products/Debug-iphonesimulator/imopc.app"
+
+[appium_lib]
+sauce_username = ""
+sauce_access_key = ""
