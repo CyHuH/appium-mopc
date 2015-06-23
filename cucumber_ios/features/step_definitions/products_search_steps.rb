@@ -2,10 +2,13 @@ require_relative '../pages/search'
 
 World(SearchWorld)
 
-Given /^I type search query (.*) and press enter button$/ do |product_name|
-  search_field = ele_index("UIASearchBar", 1)
-  search_field.send_keys product_name
-  search_field.send_keys "\n"
+Given /^I type search query (.*)$/ do |product_name|
+  @search_field = ele_index("UIASearchBar", 1)
+  @search_field.send_keys product_name
+end
+
+Given(/^Press enter button$/) do
+  @search_field.send_keys "\n"
 end
 
 Then(/^I select product №(\d+) from products list$/) do |x|
@@ -36,6 +39,10 @@ end
 
 Then(/^I select random third level category from list$/) do
   3.times { wait {tap_rnd_category} }
+end
+
+Given(/^I tap on random search suggestion$/) do
+  wait { tap_rnd_suggestion }
 end
 
 Given(/^Hard reset$/) do

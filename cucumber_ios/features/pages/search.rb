@@ -25,4 +25,10 @@ module SearchWorld
     x = categories.size + 1
     categories[rand(x)].click
   end
+
+  def tap_rnd_suggestion
+    suggestions = xpaths("//UIATableView[1]/UIATableCell[@*]/UIAStaticText[@*]")
+    x = suggestions.size + 1
+    suggestions[rand(x)].click
+  end
 end
