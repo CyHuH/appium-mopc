@@ -27,3 +27,11 @@ Feature: Products search
     Then Element №2 should exist
     Then I select product №2 from products list
     And Product name from chosen product should be equal product name from card
+
+  Scenario: All vendor products
+    Given Hard reset
+    Given I type search query Труба
+    And Press enter button
+    And I select product №3 from products list
+    Then I tap on all vendor products
+    Then Company name should be equal company name in listing

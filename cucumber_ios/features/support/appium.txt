@@ -2,7 +2,7 @@
 platformName = "ios"
 platformVersion = "8.3"
 deviceName ="iPad Air"
-app = "/Users/Andrey/Work/imopc/imopc/DerivedData/imopc/Build/Products/Debug-iphoneos/imopc.app"
+app = "/Users/Andrey/Work/imopc/imopc/build/Debug-iphoneos/imopc.app"
 autoAcceptAlerts = "true"
 
 [appium_lib]

@@ -45,6 +45,17 @@ Given(/^I tap on random search suggestion$/) do
   wait { tap_rnd_suggestion }
 end
 
+Then (/^I tap on all vendor products$/) do
+  all_vendor_products = text("Все предложения поставщика")
+  all_vendor_products.click
+end
+
+Then (/^Company name should be equal company name in listing$/) do
+  company_name = xpath("//UIAApplication[1]/UIAWindow[1]/UIANavigationBar[2]/UIAStaticText[1]")
+  company_name_in_listing = xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[2]/UIATableCell[1]/UIAStaticText[4]")
+  expect(company_name.text).to eq(company_name_in_listing.text)
+end
+
 Given(/^Hard reset$/) do
   reset
 end
