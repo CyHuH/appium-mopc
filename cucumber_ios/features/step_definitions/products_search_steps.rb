@@ -3,7 +3,7 @@ require_relative '../pages/search'
 World(SearchWorld)
 
 Given /^I type search query (.*)$/ do |product_name|
-  @search_field = ele_index("UIASearchBar", 1)
+  @search_field = tag "UIASearchBar"
   @search_field.send_keys product_name
 end
 
@@ -58,4 +58,12 @@ end
 
 Given(/^Hard reset$/) do
   reset
+end
+
+Given (/^Select (\d+) test server/) do |x|
+  server_num = x
+  debug_button = button "debug reveal ico"
+  server = text_exact "test#{num}-pulscen.ru"
+  server.click
+  first_button.click
 end

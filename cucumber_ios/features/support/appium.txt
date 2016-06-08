@@ -1,6 +1,6 @@
 [caps]
 platformName = "ios"
-platformVersion = "8.3"
+platformVersion = "9.3.2"
 deviceName ="iPad Air"
 app = "/Users/Andrey/Work/imopc/imopc/build/Debug-iphoneos/imopc.app"
 autoAcceptAlerts = "true"

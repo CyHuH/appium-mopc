@@ -1,0 +1,619 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Products search",
+    "line": 1,
+    "description": "I must search a product and open it",
+    "id": "products-search",
+    "uri": "features/products_search.feature",
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Product search",
+        "line": 4,
+        "description": "",
+        "id": "products-search;product-search",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I type search query Товар",
+            "line": 5,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 20,
+                  "val": "Товар"
+                }
+              ],
+              "location": "features/step_definitions/products_search_steps.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3854867000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "Press enter button",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/products_search_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1653781000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I select product №3 from products list",
+            "line": 7,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 18,
+                  "val": "3"
+                }
+              ],
+              "location": "features/step_definitions/products_search_steps.rb:14"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "timed out after 30 seconds (An element could not be located on the page using the given search parameters.) (Selenium::WebDriver::Error::TimeOutError)\n./features/step_definitions/products_search_steps.rb:15:in `/^I select product №(\\d+) from products list$/'\nfeatures/products_search.feature:7:in `Then I select product №3 from products list'",
+              "duration": 30714954000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "Product name from chosen product should be equal product name from card",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/products_search_steps.rb:19"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I swipe products list 4 times",
+            "line": 9,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 22,
+                  "val": "4"
+                }
+              ],
+              "location": "features/step_definitions/products_search_steps.rb:23"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "Element №17 should exist",
+            "line": 10,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 9,
+                  "val": "17"
+                }
+              ],
+              "location": "features/step_definitions/products_search_steps.rb:27"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I take a screenshot with name test2",
+            "line": 11,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 30,
+                  "val": "test2"
+                }
+              ],
+              "location": "features/step_definitions/products_search_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Search in categories",
+        "line": 13,
+        "description": "",
+        "id": "products-search;search-in-categories",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "Hard reset",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/products_search_steps.rb:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13911920000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "Tap on categories search element",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/products_search_steps.rb:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2600738000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I select random third level category from list",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/products_search_steps.rb:40"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "timed out after 30 seconds (undefined method `click' for nil:NilClass) (Selenium::WebDriver::Error::TimeOutError)\n./features/step_definitions/products_search_steps.rb:41:in `block (2 levels) in <top (required)>'\n./features/step_definitions/products_search_steps.rb:41:in `times'\n./features/step_definitions/products_search_steps.rb:41:in `/^I select random third level category from list$/'\nfeatures/products_search.feature:16:in `Then I select random third level category from list'",
+              "duration": 30275174000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I select product №5 from products list",
+            "line": 17,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 18,
+                  "val": "5"
+                }
+              ],
+              "location": "features/step_definitions/products_search_steps.rb:14"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "Product name from chosen product should be equal product name from card",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/products_search_steps.rb:19"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I swipe products list 4 times",
+            "line": 19,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 22,
+                  "val": "4"
+                }
+              ],
+              "location": "features/step_definitions/products_search_steps.rb:23"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "Element №17 should exist",
+            "line": 20,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 9,
+                  "val": "17"
+                }
+              ],
+              "location": "features/step_definitions/products_search_steps.rb:27"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I take a screenshot with name test3",
+            "line": 21,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 30,
+                  "val": "test3"
+                }
+              ],
+              "location": "features/step_definitions/products_search_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Search suggestions",
+        "line": 23,
+        "description": "",
+        "id": "products-search;search-suggestions",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "Hard reset",
+            "line": 24,
+            "match": {
+              "location": "features/step_definitions/products_search_steps.rb:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13985149000
+            }
+          },
+          {
+            "keyword": "Given ",
+            "name": "I type search query Труба",
+            "line": 25,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 20,
+                  "val": "Труба"
+                }
+              ],
+              "location": "features/step_definitions/products_search_steps.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3869963000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I tap on random search suggestion",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/products_search_steps.rb:44"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "timed out after 30 seconds (undefined method `click' for nil:NilClass) (Selenium::WebDriver::Error::TimeOutError)\n./features/step_definitions/products_search_steps.rb:45:in `/^I tap on random search suggestion$/'\nfeatures/products_search.feature:26:in `And I tap on random search suggestion'",
+              "duration": 30215115000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "Element №2 should exist",
+            "line": 27,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 9,
+                  "val": "2"
+                }
+              ],
+              "location": "features/step_definitions/products_search_steps.rb:27"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I select product №2 from products list",
+            "line": 28,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 18,
+                  "val": "2"
+                }
+              ],
+              "location": "features/step_definitions/products_search_steps.rb:14"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "Product name from chosen product should be equal product name from card",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/products_search_steps.rb:19"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "All vendor products",
+        "line": 31,
+        "description": "",
+        "id": "products-search;all-vendor-products",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "Hard reset",
+            "line": 32,
+            "match": {
+              "location": "features/step_definitions/products_search_steps.rb:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14059272000
+            }
+          },
+          {
+            "keyword": "Given ",
+            "name": "I type search query Труба",
+            "line": 33,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 20,
+                  "val": "Труба"
+                }
+              ],
+              "location": "features/step_definitions/products_search_steps.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3752304000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "Press enter button",
+            "line": 34,
+            "match": {
+              "location": "features/step_definitions/products_search_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1667190000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I select product №3 from products list",
+            "line": 35,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 18,
+                  "val": "3"
+                }
+              ],
+              "location": "features/step_definitions/products_search_steps.rb:14"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "timed out after 30 seconds () (Selenium::WebDriver::Error::TimeOutError)\n./features/step_definitions/products_search_steps.rb:15:in `/^I select product №(\\d+) from products list$/'\nfeatures/products_search.feature:35:in `And I select product №3 from products list'",
+              "duration": 30353537000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I tap on all vendor products",
+            "line": 36,
+            "match": {
+              "location": "features/step_definitions/products_search_steps.rb:48"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "Company name should be equal company name in listing",
+            "line": 37,
+            "match": {
+              "location": "features/step_definitions/products_search_steps.rb:53"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Registration",
+    "line": 1,
+    "description": "I must register user and company",
+    "id": "registration",
+    "uri": "features/registration.feature",
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Success user registration",
+        "line": 4,
+        "description": "",
+        "id": "registration;success-user-registration",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "Logout",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/registration_steps.rb:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1384947000
+            }
+          },
+          {
+            "keyword": "Given ",
+            "name": "I click registration",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/registration_steps.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4836885000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I type registration data to textfields",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/registration_steps.rb:14"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "target.frontMostApp().keyboard() failed to locate key 'b' (Selenium::WebDriver::Error::JavascriptError)\n./features/step_definitions/registration_steps.rb:29:in `/^I type random e-mail$/'\n./features/step_definitions/registration_steps.rb:15:in `/^I type registration data to textfields$/'\nfeatures/registration.feature:7:in `And I type registration data to textfields'",
+              "duration": 8279430000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I press the registration button",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/registration_steps.rb:39"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "Registration text should exists",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/registration_steps.rb:57"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I take a screenshot with name test",
+            "line": 10,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 30,
+                  "val": "test"
+                }
+              ],
+              "location": "features/step_definitions/products_search_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Success company registration",
+        "line": 12,
+        "description": "",
+        "id": "registration;success-company-registration",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I go to Settings",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/registration_steps.rb:45"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "An element could not be located on the page using the given search parameters. (Selenium::WebDriver::Error::NoSuchElementError)\n./features/step_definitions/registration_steps.rb:46:in `/^I go to Settings$/'\nfeatures/registration.feature:13:in `Given I go to Settings'",
+              "duration": 1355345000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I press company registration text",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/registration_steps.rb:50"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I type company registration data to textfields",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/registration_steps.rb:67"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I press the registration button",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/registration_steps.rb:39"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I take a screenshot with name test1",
+            "line": 17,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 30,
+                  "val": "test1"
+                }
+              ],
+              "location": "features/step_definitions/products_search_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

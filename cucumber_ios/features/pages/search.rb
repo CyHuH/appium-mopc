@@ -1,4 +1,8 @@
 module SearchWorld
+  def search_button
+    button_exact "Поиск"
+  end
+
   def product_click
     xpath("//UIATableView[1]/UIATableCell[3]/UIAStaticText[1]").click
   end

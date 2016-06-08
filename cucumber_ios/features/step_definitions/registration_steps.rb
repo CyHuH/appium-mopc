@@ -79,12 +79,12 @@ Given /^I type company registration data to textfields$/ do
   number.send_keys Faker::PhoneNumber.subscriber_number(6)
 end
 
-Given /^Logout$/ do
-  #Если авторизованы, то сообщения доступны
-  if exists { button_exact "Сообщения" } then
-    step "I go to Settings"
-    logout_button = text_exact "Выйти"
-    logout_button.click
-    alert_accept
-  end
-end
+# Given /^Logout$/ do
+#   #Если авторизованы, то сообщения доступны
+#   if exists { button_exact "Сообщения" } then
+#     step "I go to Settings"
+#     logout_button = text_exact "Выйти"
+#     logout_button.click
+#     alert_accept
+#   end
+# end
