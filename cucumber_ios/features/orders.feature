@@ -1,9 +1,10 @@
 Feature: Orders
-  I create an order
+  I create and check an order
+  Background: Steps before each scenarios
+    Given Close region popup if exists
+    Given Logout 
 
   Scenario: Authorize with client and create an order
-    Given Close region popup if exists
-    Given Logout
     Given Login with client
     Given Open search screen
     Given Search for Tovar
@@ -15,8 +16,6 @@ Feature: Orders
     And All fields should be the same
 
   Scenario: Authorize with seller and check an order
-    Given Close region popup if exists
-    Given Logout
     And Login with seller
     Then I go to orders screen
     And New order should exist
