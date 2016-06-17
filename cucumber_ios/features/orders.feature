@@ -2,7 +2,7 @@ Feature: Orders
   I create and check an order
   Background: Steps before each scenarios
     Given Close region popup if exists
-    Given Logout 
+    Given Logout
 
   Scenario: Authorize with client and create an order
     Given Login with client

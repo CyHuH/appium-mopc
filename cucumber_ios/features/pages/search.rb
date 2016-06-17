@@ -1,6 +1,18 @@
 module SearchWorld
+  def search_field
+    tag "UIASearchBar"
+  end
+
   def search_button
     button_exact "Поиск"
+  end
+
+  def categories_search
+    wait { first_ele("UIATableCell") }
+  end
+
+  def all_vendor_products
+    text("Все предложения компании")
   end
 
   def product_click
@@ -15,10 +27,19 @@ module SearchWorld
     xpath("//UIATableView[1]/UIATableCell[#{n}]/UIAStaticText[1]")
   end
 
-  def swipe_up_count(n)
+  def swipe_left_side(n)
     swipe_opts = { :start_x => 100,
                    :start_y => 700,
                    :end_x => 100,
+                   :end_y => 200,
+                   :duration => 500 }
+    n.to_i.times { wait{ swipe(swipe_opts) } }
+  end
+
+  def swipe_right_side(n)
+    swipe_opts = { :start_x => 700,
+                   :start_y => 600,
+                   :end_x => 700,
                    :end_y => 200,
                    :duration => 500 }
     n.to_i.times { wait{ swipe(swipe_opts) } }

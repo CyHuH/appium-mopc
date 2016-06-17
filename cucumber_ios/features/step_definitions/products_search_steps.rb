@@ -3,12 +3,11 @@ require_relative '../pages/search'
 World(SearchWorld)
 
 Given /^I type search query (.*)$/ do |product_name|
-  @search_field = tag "UIASearchBar"
-  @search_field.send_keys product_name
+  search_field.type product_name
 end
 
 Given(/^Press enter button$/) do
-  @search_field.send_keys "\n"
+  search_field.send_keys "\n"
 end
 
 Then(/^I select product №(\d+) from products list$/) do |x|
@@ -21,7 +20,7 @@ Given(/^Product name from chosen product should be equal product name from card$
 end
 
 Given(/^I swipe products list (\d+) times$/) do |x|
-  swipe_up_count(x)
+  swipe_left_side(x)
 end
 
 Then(/^Element №(\d+) should exist$/) do |x|
@@ -33,7 +32,6 @@ Then(/^I take a screenshot with name (.*)$/) do |name|
 end
 
 Given(/^Tap on categories search element$/) do
-  categories_search = wait { first_ele("UIATableCell") }
   categories_search.click
 end
 
@@ -46,7 +44,7 @@ Given(/^I tap on random search suggestion$/) do
 end
 
 Then (/^I tap on all vendor products$/) do
-  all_vendor_products = text("Все предложения поставщика")
+  swipe_right_side(1)
   all_vendor_products.click
 end
 

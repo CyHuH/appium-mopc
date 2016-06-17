@@ -1,13 +1,15 @@
+require_relative '../pages/authorization'
+require_relative '../pages/registration'
+World(AuthorizationWorld, RegistrationWorld)
+
 DEFAULT_DATA = { :full_name => Ryba::Name.full_name.gsub(/['Ё''ё']/, 'е'),
          :user_email => Faker::Internet.email,
          :user_password => Faker::Internet.password(8),
          :company_name => Ryba::Company.name }
 
 
-Given /^I click registration$/ do
-  enter_button = button_exact "Войти"
-  enter_button.click
-  reg_button = button_exact "Зарегистрироваться"
+Given /^I open registration screen$/ do
+  login_button.click
   reg_button.click
 end
 
@@ -20,38 +22,28 @@ Given /^I type registration data to textfields$/ do
 end
 
 Given /^I type random name$/ do
-  fio = textfield_exact "ФИО"
-  fio.send_keys DEFAULT_DATA[:full_name]
+  fio_field.type DEFAULT_DATA[:full_name]
 end
 
 Given /^I type random e-mail$/ do
-  e_mail = textfield_exact "Email"
-  e_mail.send_keys DEFAULT_DATA[:user_email]
+  email_field.type DEFAULT_DATA[:user_email]
 end
 
 Given /^I type and confirm random password$/ do
-  pass_field = textfield 3
-  pass_field.send_keys DEFAULT_DATA[:user_password]
-  confirm_pass_field = textfield 4
-  confirm_pass_field.send_keys DEFAULT_DATA[:user_password]
+  pass_field.type DEFAULT_DATA[:user_password]
 end
 
 Given /^I press the registration button$/ do
-  reg_button = button_exact "Готово"
   reg_button.click
   sleep 3
 end
 
-Given /^I go to Settings$/ do
-  settings = button_exact "Настройки"
-  settings.click
+Given /^I go to cabinet$/ do
+  cabinet_button.click
 end
 
-Given /^I press company registration text$/ do
-  company_choice = text_exact "Выбор компании"
-  company_choice.click
-  #Илья создал непонятный элемент, придется тапать по координатам
-  execute_script 'mobile: tap', :x => 537, :y => 292
+Given /^I press add company$/ do
+  add_company.click
 end
 
 Given /^Registration text should exists$/ do
@@ -66,7 +58,7 @@ end
 
 Given /^I type company registration data to textfields$/ do
   name = textfield 1
-  name.send_keys DEFAULT_DATA[:company_name]
+  name.type DEFAULT_DATA[:company_name]
   listviews = ["Страна", "Регион", "Город"]
   listviews.each do |x|
     value = text_exact x
@@ -75,6 +67,6 @@ Given /^I type company registration data to textfields$/ do
   end
   code = textfields[2]
   number = textfields[3]
-  code.send_keys Faker::PhoneNumber.subscriber_number(4)
-  number.send_keys Faker::PhoneNumber.subscriber_number(6)
+  code.type Faker::PhoneNumber.subscriber_number(4)
+  number.type Faker::PhoneNumber.subscriber_number(6)
 end

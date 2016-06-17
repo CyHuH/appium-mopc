@@ -133,5 +133,7 @@ And /^Login with seller$/ do
 end
 
 Then /^I go to orders screen$/ do
-    
+  steps %Q{
+    Given Open orders screen
+  }
 end
